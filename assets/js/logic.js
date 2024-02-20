@@ -64,7 +64,7 @@ answerChoiceA.addEventListener('click', function(event) {
         
         
         
-        if (questionsArray[i].correctAnswer === correctAnswer) { 
+        if (answerChoiceA.textContent === correctAnswer) { 
             
             document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
             sfxRight.play();
@@ -100,7 +100,7 @@ answerChoiceB.addEventListener('click', function(event) {
     event.stopPropagation();
     correctAnswer = questionsArray[i].correctAnswer;
     
-        if (questionsArray[i].correctAnswer === correctAnswer) { 
+        if (answerChoiceB.textContent === correctAnswer) { 
             document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
             sfxRight.play();
             setTimeout(function() {
@@ -132,7 +132,7 @@ answerChoiceC.addEventListener('click', function(event) {
     event.stopPropagation();
     correctAnswer = questionsArray[i].correctAnswer;
     
-    if (questionsArray[i].correctAnswer === correctAnswer) { 
+    if (answerChoiceC.textContent === correctAnswer) { 
         document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
         sfxRight.play();
         setTimeout(function() {
@@ -164,7 +164,7 @@ answerChoiceD.addEventListener('click', function(event) {
     event.stopPropagation();
     correctAnswer= questionsArray[i].correctAnswer;
     
-    if (questionsArray[i].correctAnswer === correctAnswer) { 
+    if (answerChoiceD.textContent === correctAnswer) { 
         document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
         sfxRight.play();
         setTimeout(function() {

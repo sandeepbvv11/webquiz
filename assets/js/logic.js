@@ -18,7 +18,8 @@
     var score = 0;
     
     let i = 0;
-
+    let sfxRight = new Audio('assets/sfx/correct.wav');
+    let sfxWrong = new Audio('assets/sfx/incorrect.wav');
 
 var countdownTimerInterval = setInterval(setCountdownTimer, 1000);
 
@@ -66,6 +67,7 @@ answerChoiceA.addEventListener('click', function(event) {
         if (questionsArray[i].correctAnswer === correctAnswer) { 
             
             document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
+            sfxRight.play();
             setTimeout(function() {
             document.getElementById("AnswerResponse").innerHTML = "";
                 },
@@ -79,6 +81,7 @@ answerChoiceA.addEventListener('click', function(event) {
             time_remaining -= 5;
             
             document.getElementById("AnswerResponse").innerHTML = "Incorrect! Better luck in the next one!";
+            sfxWrong.play();
             setTimeout(function() {
                 document.getElementById("AnswerResponse").innerHTML = "";
                     },
@@ -99,6 +102,7 @@ answerChoiceB.addEventListener('click', function(event) {
     
         if (questionsArray[i].correctAnswer === correctAnswer) { 
             document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
+            sfxRight.play();
             setTimeout(function() {
                 document.getElementById("AnswerResponse").innerHTML = "";
                     },
@@ -109,6 +113,7 @@ answerChoiceB.addEventListener('click', function(event) {
         } else {
             time_remaining -= 5;
             document.getElementById("AnswerResponse").innerHTML = "Incorrect! Better luck in the next one!";
+            sfxWrong.play();
             setTimeout(function() {
                 document.getElementById("AnswerResponse").innerHTML = "";
                     },
@@ -129,6 +134,7 @@ answerChoiceC.addEventListener('click', function(event) {
     
     if (questionsArray[i].correctAnswer === correctAnswer) { 
         document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
+        sfxRight.play();
         setTimeout(function() {
             document.getElementById("AnswerResponse").innerHTML = "";
                 },
@@ -139,6 +145,7 @@ answerChoiceC.addEventListener('click', function(event) {
     } else {
         time_remaining -= 5;
         document.getElementById("AnswerResponse").innerHTML = "Incorrect! Better luck in the next one!";
+        sfxWrong.play();
         setTimeout(function() {
             document.getElementById("AnswerResponse").innerHTML = "";
                 },
@@ -159,6 +166,7 @@ answerChoiceD.addEventListener('click', function(event) {
     
     if (questionsArray[i].correctAnswer === correctAnswer) { 
         document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
+        sfxRight.play();
         setTimeout(function() {
             document.getElementById("AnswerResponse").innerHTML = "";
                 },
@@ -169,6 +177,7 @@ answerChoiceD.addEventListener('click', function(event) {
     } else {
         time_remaining -= 5;
         document.getElementById("AnswerResponse").innerHTML = "Incorrect! Better luck in the next one!";
+        sfxWrong.play();
         setTimeout(function() {
             document.getElementById("AnswerResponse").innerHTML = "";
                 },
